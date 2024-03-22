@@ -1,0 +1,12 @@
+[submodule "bubble-sort-documentation"]
+	path = bubble-sort-documentation
+	url = https://github.com/zarianich/bubble-sort-documentation
+[submodule "skating-community-survey"]
+	path = skating-community-survey
+	url = https://github.com/zarianich/skating-community-survey
+[submodule "fender-telecaster-tribute"]
+	path = fender-telecaster-tribute
+	url = https://github.com/zarianich/fender-telecaster-tribute
+[submodule "pick-a-pineapple"]
+	path = pick-a-pineapple
+	url = https://github.com/zarianich/pick-a-pineapple
