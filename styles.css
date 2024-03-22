@@ -1,0 +1,319 @@
+:root {
+    --main-color: #245c00;
+    --secondary-color: #67a125;
+    --accent-color: #b2de81;
+    --highlighter-color: #fcfefe;
+    --wood-color1: #7c4326;
+    --wood-color2: #593E1A;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-size: 16px;
+    font-family: Verdana, serif;
+    background-color: var(--main-color);
+    color: var(--accent-color);
+    width: 100%;
+  }
+  
+  body a {
+    text-decoration: none;
+  }
+  
+  .frame {
+    border: 1px solid var(--accent-color);
+  }
+  
+  #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+    align-items:  center;
+    overflow: auto;
+    padding: 20px 20px;
+    z-index: 1;
+  }
+  
+  #navbar a {
+    text-decoration: none;
+    color: var(--highlighter-color);
+    border-left: 1px solid var(--highlighter-color);
+    border-right: 1px solid var(--highlighter-color);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-size: 1.2em;
+    padding: 0 20px;
+  }
+  
+  #welcome-section {
+    margin: 80px 0 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  #welcome-section h1 {
+    padding-top: 80px;
+    font-size: 2em;
+  }
+  
+  #about-me {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 50px;
+    padding: 0 20px 0 40px;
+  }
+  
+  #about-me img {
+    border-radius: 10px;
+    max-width: 300px;
+    max-height: 500px;
+  }
+  
+  #about-me p {
+    max-width: 500px;
+  }
+  
+  #log {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background: linear-gradient(
+      var(--wood-color1) 0%,
+      var(--wood-color2) 100%
+    );
+  }
+  
+  .leaf {
+    width: 50px;
+    height: 100px;
+    transform-origin: bottom left;
+    animation: leaves 5s ease-in-out infinite;
+  }
+  
+  .leaf-top {
+    width: 30px;
+    height: 50px;
+    border-radius: 300px 10px 300px 10px;
+    border: 1px solid var(--accent-color);
+    background-color: var(--accent-color);
+    margin-left: 17px;
+    margin-top: 13px;
+  }
+  
+  .leaf-bottom {
+    width: 3px;
+    height: 35px;
+    background-color: var(--wood-color2);
+    margin-left: 10px;
+    transform: rotate(20deg);
+  }
+  
+  #leaf1 {
+    position: relative;
+    left: 5%;
+    bottom: 70px;
+  }
+  
+  #leaf2 {
+    position: relative;
+    left: 30%;
+    bottom: 170px;
+  }
+  
+  #leaf3 {
+    position: relative;
+    left: 60%;
+    bottom: 300px;
+  }
+  
+  #leaf4 {
+    position: relative;
+    left: 90%;
+    bottom: 400px;
+  }
+  
+  @keyframes leaves {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  #wind1 {
+    position: relative;
+    bottom: 580px;
+    width: 300px;
+    left: -300px;
+    height: 100px;
+    border-radius: 0% 50% 50% 5%;
+    border-right: 10px solid var(--highlighter-color);
+    border-bottom: 5px solid var(--highlighter-color);
+    z-index: -1;
+    animation: wind 10s linear infinite; 
+  }
+  
+  #wind2 {
+    position: relative;
+    bottom: 700px;
+    left: -350px;
+    width: 300px;
+    height: 100px;
+    border-radius: 0% 50% 50% 5%;
+    border-right: 10px solid var(--highlighter-color);
+    border-bottom: 5px solid var(--highlighter-color);
+    z-index: -1;
+    animation: wind 10s linear 2s infinite;
+  }
+  
+  #wind3 {
+    position: relative;
+    bottom: 780px;
+    left: -350px;
+    width: 300px;
+    height: 100px;
+    border-radius: 0% 50% 50% 5%;
+    border-right: 10px solid var(--highlighter-color);
+    border-bottom: 5px solid var(--highlighter-color);
+    z-index: -1;
+    animation: wind 11s linear 3s infinite;
+  }
+  
+  @keyframes wind {
+    0% {
+      transform: translateX(1rem);
+    }
+    50% {
+      transform: translateX(50rem);
+    }
+    100% {
+      transform: translateX(120rem);
+    }
+  }
+  
+  #projects {
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  #projects-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 20px;
+    padding: 50px 40px 20px;
+  }
+  
+  #projects h2 {
+    padding-bottom: 60px;
+  }
+  
+  .project-tile {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    padding-bottom: 10px;
+    transition: transform 0.5s ease-in-out 0ms;
+  }
+  
+  .project-tile img {
+    width: 100%;
+    max-width: 600px;
+    max-height: 400px;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .project-tile a {
+    color: var(--main-color);
+  }
+  
+  .project-tile:hover {
+    transform: scale(1.1);
+  }
+  
+  .project-tile p {
+    padding-top: 5px;
+  }
+  
+  #contact {
+    text-align: center;
+    padding: 20px 20px 50px;
+    background-color: var(--secondary-color);
+    color: var(--highlighter-color);
+  }
+  
+  #contact h2 {
+    padding: 20px 0 40px;
+  }
+  
+  #socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  #contact a {
+    color: var(--highlighter-color);
+    border-left: 1px solid var(--highlighter-color);
+    border-right: 1px solid var(--highlighter-color);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 0 20px;
+    transition: transform 0.7s ease-in-out 0ms;
+  }
+  
+  #contact a:hover {
+    transform: scale(1.2) translateY(-5px);
+  }
+  
+  @media only screen and (max-width: 600px) {
+    #navbar {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 25px 0 30px;
+    }
+    #welcome-section h1 {
+      padding-top: 50px;
+    }
+    #about-me {
+      grid-template-columns: 1fr;
+      padding: 0 60px;
+      margin-top: 20px;
+    }
+    #about-me img {
+      order: -1;
+    }
+    #projects-container {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
