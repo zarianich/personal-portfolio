@@ -10,3 +10,33 @@
 [submodule "pick-a-pineapple"]
 	path = pick-a-pineapple
 	url = https://github.com/zarianich/pick-a-pineapple
+[submodule "roman-numeral-converter"]
+	path = roman-numeral-converter
+	url = https://github.com/zarianich/roman-numeral-converter
+[submodule "25-5-clock"]
+	path = 25-5-clock
+	url = https://github.com/zarianich/25-5-clock
+[submodule "calculator"]
+	path = calculator
+	url = https://github.com/zarianich/calculator
+[submodule "drum-machine"]
+	path = drum-machine
+	url = https://github.com/zarianich/drum-machine
+[submodule "markdown-previewer"]
+	path = markdown-previewer
+	url = https://github.com/zarianich/markdown-previewer
+[submodule "random-quote-generator"]
+	path = random-quote-generator
+	url = https://github.com/zarianich/random-quote-generator
+[submodule "cash-register"]
+	path = cash-register
+	url = https://github.com/zarianich/cash-register
+[submodule "pokemon-search-app"]
+	path = pokemon-search-app
+	url = https://github.com/zarianich/pokemon-search-app
+[submodule "palindrome-checker"]
+	path = palindrome-checker
+	url = https://github.com/zarianich/palindrome-checker
+[submodule "telephone-number-validator"]
+	path = telephone-number-validator
+	url = https://github.com/zarianich/telephone-number-validator

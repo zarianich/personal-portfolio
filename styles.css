@@ -2,6 +2,8 @@
     --main-color: #245c00;
     --secondary-color: #67a125;
     --accent-color: #b2de81;
+    --navbar-color:  #7DC24B;
+    --tile-color: #A4E666;
     --highlighter-color: #fcfefe;
     --wood-color1: #7c4326;
     --wood-color2: #593E1A;
@@ -28,13 +30,16 @@
   .frame {
     border: 1px solid var(--accent-color);
   }
+
+  .frame-cert {
+    border: 2px solid var(--accent-color);
+    filter: brightness(90%);
+  }
   
   #navbar {
-    position: fixed;
-    top: 0;
     width: 100%;
     height: 80px;
-    background-color: var(--secondary-color);
+    background-color: var(--navbar-color);
     display: flex;
     justify-content: space-evenly;
     gap: 50px;
@@ -46,9 +51,9 @@
   
   #navbar a {
     text-decoration: none;
-    color: var(--highlighter-color);
-    border-left: 1px solid var(--highlighter-color);
-    border-right: 1px solid var(--highlighter-color);
+    color: var(--wood-color2);
+    border-left: 1px solid var(--wood-color2);
+    border-right: 1px solid var(--wood-color2);
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     font-size: 1.2em;
@@ -56,7 +61,7 @@
   }
   
   #welcome-section {
-    margin: 80px 0 250px;
+    margin-bottom: 220px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -65,7 +70,7 @@
   }
   
   #welcome-section h1 {
-    padding-top: 80px;
+    padding-top: 60px;
     font-size: 2em;
   }
   
@@ -215,7 +220,7 @@
     padding: 100px 0;
   }
   
-  #projects-container {
+  #projects-container, #certificates-container {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -227,42 +232,54 @@
   #projects h2 {
     padding-bottom: 60px;
   }
-  
+
   .project-tile {
-    background-color: var(--accent-color);
-    border-radius: 10px;
+    background-color: var(--tile-color);
     padding-bottom: 10px;
-    transition: transform 0.5s ease-in-out 0ms;
   }
   
+  .project-tile, .certificate-tile {
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out 0ms;
+  }
+
   .project-tile img {
-    width: 100%;
-    max-width: 600px;
-    max-height: 400px;
     border-radius: 10px 10px 0 0;
   }
   
+  .project-tile img, .certificate-tile img {
+    width: 100%;
+    max-width: 600px;
+    max-height: 400px;
+  }
+
+  
   .project-tile a {
-    color: var(--main-color);
+    color: var(--wood-color2);
   }
   
-  .project-tile:hover {
+  .project-tile:hover, .certificate-tile:hover {
     transform: scale(1.1);
   }
   
   .project-tile p {
-    padding-top: 5px;
+    padding: 5px 0;
+  }
+
+  #certificates {
+    text-align: center;
+    padding: 20px 0 100px;
   }
   
   #contact {
     text-align: center;
     padding: 20px 20px 50px;
-    background-color: var(--secondary-color);
-    color: var(--highlighter-color);
+    background-color: var(--wood-color2);
+    color: var(--accent-color);
   }
   
   #contact h2 {
-    padding: 20px 0 40px;
+    padding-bottom: 40px;
   }
   
   #socials {
@@ -274,9 +291,9 @@
   }
   
   #contact a {
-    color: var(--highlighter-color);
-    border-left: 1px solid var(--highlighter-color);
-    border-right: 1px solid var(--highlighter-color);
+    color: var(--accent-color);
+    border-left: 1px solid var(--secondary-color);
+    border-right: 1px solid var(--secondary-color);
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     padding: 0 20px;
@@ -304,7 +321,7 @@
     #about-me img {
       order: -1;
     }
-    #projects-container {
+    #projects-container, #certificates-container {
       grid-template-columns: 1fr;
       gap: 30px;
       padding-left: 50px;
